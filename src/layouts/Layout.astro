@@ -1,0 +1,90 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: 'Nothing You Could Do';
+		src: url('../fonts/');
+		src: url('../fonts/?#iefix') format('embedded-opentype'),
+			url('../fonts/NothingYouCouldDo.woff2') format('woff2'),
+			url('../fonts/NothingYouCouldDo.woff') format('woff'),
+			url('../fonts/NothingYouCouldDo.ttf') format('truetype'),
+			url('../fonts/NothingYouCouldDo-Regular.otf') format('opentype'),
+			url('../fonts/NothingYouCouldDo.svg#NothingYouCouldDo') format('svg');
+		font-weight: 100;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Caveat';
+		src: url('../fonts/Caveat-Regular.eot');
+		src: url('../fonts/Caveat-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Caveat-Regular.woff2') format('woff2'),
+			url('../fonts/Caveat-Regular.woff') format('woff'),
+			url('../fonts/Caveat-Regular.ttf') format('truetype'),
+			url('../fonts/Caveat-Regular.otf') format('opentype'),
+			url('../fonts/Caveat-Regular.svg#Caveat-Regular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Helvetica Neue Bold';
+		src: url('../fonts/HelveticaNeue-Bold.eot');
+		src: url('../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+			url('../fonts/HelveticaNeue-Bold.woff') format('woff'),
+			url('../fonts/HelveticaNeue-Bold.ttf') format('truetype'),
+			url('../fonts/HelveticaNeue-Bold.otf') format('opentype'),
+			url('../fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Helvetica Neue Regular';
+		src: url('../fonts/HelveticaNeue.eot');
+		src: url('../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/HelveticaNeue.woff2') format('woff2'),
+			url('../fonts/HelveticaNeue.woff') format('woff'),
+			url('../fonts/HelveticaNeue.ttf') format('truetype'),
+			url('../fonts/HelveticaNeue-Regular.otf') format('opentype'),
+			url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	.helvetica-neue-bold { font-family: 'Helvetica Neue Bold'; }
+	.helvetica-neue-regular { font-family: 'Helvetica Neue Regular'; }
+
+	body {
+		background-color: #729E9C;
+	}
+
+	.mars-color { 
+		background: linear-gradient(0deg, rgba(165,64,2,1) 0%, rgba(151,55,1,1) 100%); 
+	}
+</style>
